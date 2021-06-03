@@ -1,0 +1,10 @@
+Steps to use this module.
+#########################
+1. Create a directory named "kafka-connect-twitter" in the path src/main/java/kafka/connectors/
+2. Extract the kafka-connect-twitter-0.2.26.tar.gz and copy all the jar files into kafka-connect-twitter directory.
+3. Create two topics named "witter_status_connect" and "twitter_deletes_connect"
+4. Run the run.sh script or "connect-standalone connect-standalone.properties twitter.properties" from terminal to
+    start the kafka twitter connector.
+5. Run the kafka command
+    "kafka-console-consumer --bootstrap-server 127.0.0.1:9092 --topic twitter_status_connect --from-beginning"
+    to receive the tweets based on the twitter.properties configuration.
